@@ -1,0 +1,14 @@
+<app-logout></app-logout>
+
+<div class="user-list">
+  <a [routerLink]="['/auth/add-user']" class="add-user">Add New User</a>
+  <h2 style="text-align: center">Users</h2>
+  <div class="user-summary"></div>
+  <div class="user-cards">
+    <div *ngFor="let user of users$ | async" class="user-card">
+      <div class="user-header">
+        <h3>{{ user.userId }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+  <label>
+    UserId:
+    <input type="text" formControlName="userId" />
+    <p
+      class="error"
+      *ngIf="
+        loginForm.controls['userId']['touched'] &&
+        loginForm.controls['userId'].errors &&
+        loginForm.controls['userId'].errors['required']
+      "
+    >
+      UserId is required
+    </p>
+  </label>
+
+  <label>
+    Password:
+    <input type="password" formControlName="password" />
+    <p
+      class="error"
+      *ngIf="
+        loginForm.controls['password']['touched'] &&
+        loginForm.controls['password'].errors &&
+        loginForm.controls['password'].errors['required']
+      "
+    >
+      Password is required
+    </p>
+  </label>
+
+  <label for="role"
+    >Role:
+    <select formControlName="role">
+      <option value="CLIENT">Client</option>
+      <option value="ADMIN">Admin</option>
+    </select>
+    <p
+      class="error"
+      *ngIf="
+        loginForm.controls['role']['touched'] &&
+        loginForm.controls['role'].errors &&
+        loginForm.controls['role'].errors['required']
+      "
+    >
+      Role is required
+    </p>
+  </label>
+
+  <button type="submit">Log in</button>
+
+  <div *ngIf="loginError$ | async as error" class="error">
+    {{ error.message }}
+  </div>
+</form>

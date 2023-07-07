@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 111.0.5555.0 (Linux x86_64)" package="" timestamp="2023-07-07T08:25:04" id="0" hostname="ip-172-31-16-51" tests="14" errors="0" failures="0" time="0.515">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/111.0.5555.0 Safari/537.36"/>
+  </properties>
+  <testcase name="LogoutComponent should create" time="0.281" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).LogoutComponent"/>
+  <testcase name="AuthService should be created" time="0.012" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).AuthService"/>
+  <testcase name="AuthService login should make a POST request to login" time="0.017" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).AuthService login"/>
+  <testcase name="AuthService getToken should get the token from localStorage" time="0.013" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).AuthService getToken"/>
+  <testcase name="AuthService getUsers should make a GET request to retrieve users" time="0.005" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).AuthService getUsers"/>
+  <testcase name="AuthService createUser should make a POST request to create a user" time="0.005" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).AuthService createUser"/>
+  <testcase name="TransactionService should make a POST request and return transaction data" time="0.009" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).TransactionService"/>
+  <testcase name="TransactionService should fetch all transactions" time="0.006" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).TransactionService"/>
+  <testcase name="TransactionService should getOutstandingBalance" time="0.009" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).TransactionService"/>
+  <testcase name="UserComponent should create the component" time="0.076" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).UserComponent"/>
+  <testcase name="UserComponent ngOnInit should initialize the userForm with empty fields and validators" time="0.03" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).UserComponent ngOnInit"/>
+  <testcase name="UserComponent onSubmit should set isFormSubmitted to true" time="0.029" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).UserComponent onSubmit"/>
+  <testcase name="UserComponent onSubmit should not call authService.createUser if the form is invalid" time="0.013" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).UserComponent onSubmit"/>
+  <testcase name="UserComponent onSubmit should call authService.createUser with the user data if the form is valid" time="0.01" classname="Chrome_Headless_111_0_5555_0_(Linux_x86_64).UserComponent onSubmit"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

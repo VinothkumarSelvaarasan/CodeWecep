@@ -1,0 +1,44 @@
+<app-logout></app-logout>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="userForm" class="user-form">
+  <div class="form-group">
+    <label for="userId">UserId:</label>
+    <input
+      type="text"
+      id="userId"
+      formControlName="userId"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      formControlName="password"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="role">Role:</label>
+    <select formControlName="role" class="form-control">
+      <option value="CLIENT">Client</option>
+      <option value="ADMIN">Admin</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn-submit">Create User</button>
+
+  <ng-container>
+    <div *ngIf="userError$ | async as error" class="error">
+      {{ error }}
+    </div>
+    <div *ngIf="userSuccess$ | async as msg" class="success">
+      {{ msg }}
+    </div>
+  </ng-container>
+
+  <a routerLink="/auth/users" class="task-list" class="task-list"
+    >Go to User List</a
+  >
+</form>
