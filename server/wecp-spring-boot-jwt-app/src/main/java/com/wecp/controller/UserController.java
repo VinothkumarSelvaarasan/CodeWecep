@@ -64,3 +64,8 @@ public String getData()
 {
 	return "Hai Welcome to Git Hub";
 }
+@GetMapping("/pushdata")
+public String pushData()
+{
+	return "Hai Welcome to Git Hub Anitha";
+}
